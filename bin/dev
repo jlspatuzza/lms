@@ -1,0 +1,10 @@
+#!/bin/sh
+set -e
+
+# Ensure dependencies are installed
+bundle check || bundle install
+yarn install --check-files
+
+# Run development server
+bin/rails server
+
